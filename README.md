@@ -14,6 +14,9 @@ This script will iterate each of the following in your codebase, delete it, and 
 * Interface
 * Enum
 
+> [!WARNING]  
+> Create a new branch and ensure all of your changes are commited BEFORE running this script.
+
 > [!IMPORTANT]  
 > If you use CUSTOM_ELEMENTS_SCHEMA in your modules, the app will still build even with components removed, so this script may remove components even if thay are still used.
 
