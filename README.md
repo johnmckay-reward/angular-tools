@@ -15,6 +15,8 @@ This script will iterate each of the following in your codebase, delete it, and 
 * Enum
 
 > [!IMPORTANT]  
-> If you use CUSTOM_ELEMENTS_SCHEMA in your modules, the app will still build even with components removed, some workarounds:
-> Convert the individual components which use CUSTOM_ELEMENTS_SCHEMA to standalone *before* running this script
-> If on an older Angular version which doesn't support standalone components, move the components which need CUSTOM_ELEMENTS_SCHEMA into their own modules
+> If you use CUSTOM_ELEMENTS_SCHEMA in your modules, the app will still build even with components removed, so this script may remove components even if thay are still used.
+
+Some workarounds:
+* Convert the individual components which use CUSTOM_ELEMENTS_SCHEMA to standalone *before* running this script
+* If on an older Angular version which doesn't support standalone components, move the components which need CUSTOM_ELEMENTS_SCHEMA into their own modules
