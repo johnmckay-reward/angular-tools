@@ -1,25 +1,27 @@
-# angular-tools
-Various Scripts I found useful for cleaning up an old Angular codebase
+# Angular Tools
+A collection of scripts useful for cleaning up an old Angular codebase.
 
-## remove-unused-artifacts.js
+## `remove-unused-artifacts.js`
 
-This script will iterate each of the following in your codebase, delete it, and then try and build your Angular app. If the build succeeds, it will commit this change, and then move onto the next artifact:
+This script iterates through various artifacts in your codebase, attempts to delete them, and then tries to build your Angular app. If the build succeeds, the script commits the change and proceeds to the next artifact.
 
-* Component
-* Directive
-* Pipe
-* Service
-* Guard
-* Interceptor
-* Interface
-* Enum
+The following artifacts are checked:
+- Components
+- Directives
+- Pipes
+- Services
+- Guards
+- Interceptors
+- Interfaces
+- Enums
 
-> [!WARNING]  
-> Create a new branch and ensure all of your changes are commited BEFORE running this script.
+> **⚠ WARNING:**  
+> Before running this script, create a new branch and ensure all your changes are committed.
 
-> [!IMPORTANT]  
-> If you use CUSTOM_ELEMENTS_SCHEMA in your modules, the app will still build even with components removed, so this script may remove components even if thay are still used.
+> **ℹ IMPORTANT:**  
+> If your modules use `CUSTOM_ELEMENTS_SCHEMA`, the app may still build successfully even if components are removed. This means the script might delete components that are still in use.
 
-Some workarounds:
-* Convert the individual components which use CUSTOM_ELEMENTS_SCHEMA to standalone *before* running this script
-* If on an older Angular version which doesn't support standalone components, move the components which need CUSTOM_ELEMENTS_SCHEMA into their own modules
+### Workarounds:
+- Convert individual components using `CUSTOM_ELEMENTS_SCHEMA` into standalone components *before* running this script.
+- If you're on an older Angular version that doesn't support standalone components, move components requiring `CUSTOM_ELEMENTS_SCHEMA` into their own modules.
+
