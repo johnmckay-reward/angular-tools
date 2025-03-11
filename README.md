@@ -59,12 +59,3 @@ If no path is provided, it defaults to the current directory (.).
 * Saves modified .component.ts files automatically.
 * Displays a report of skipped, removed, and retained methods.
 
-#### Example Report
-
-File: src/app/example/example.component.ts
-  Removed methods: unusedMethod1, unusedMethod2
-  Kept methods:
-    handleClick (TS usage: 3, HTML usage: 1)
-    fetchData (TS usage: 2, HTML usage: 0)
-------------------
-Report generation complete.
